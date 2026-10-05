@@ -1,6 +1,6 @@
 # SkillDB discovery plugins
 
-MIT-licensed discovery adapters for Cursor, Claude, and OpenAI hosts. The public package repository is [latentsmurf/skilldb-plugins](https://github.com/latentsmurf/skilldb-plugins). Public source availability does not mean that a platform directory has approved or listed a package.
+MIT-licensed discovery adapters for Cursor, Claude, OpenAI, GitHub Copilot, VS Code, and Gemini CLI hosts. The public package repository is [latentsmurf/skilldb-plugins](https://github.com/latentsmurf/skilldb-plugins). Public source availability does not mean that a platform directory has approved or listed a package.
 
 Find reusable AI agent guidance using the public SkillDB catalog. This package provides a discovery workflow and an anonymous remote MCP connection. It can search metadata and inspect short excerpts; it does not retrieve complete skills, install them, connect an account, or access private/team libraries.
 
@@ -27,6 +27,21 @@ Actual Cursor installation and host behavior remain unverified. These authored p
 - Repository root: portable Cursor discovery package (`plugin.json`, `mcp.json`, `skills/`, and `assets/`).
 - `claude/skilldb/`: native Claude adapter; use this plugin path when configuring its GitHub source.
 - `openai/skilldb/`: portable OpenAI package with its own manifest and versioned metadata.
+- `copilot/skilldb/`: Agent Plugins 1.0 package for GitHub Copilot and VS Code.
+- Root `gemini-extension.json`: Gemini CLI adapter using the shared discovery skill and branding.
+
+## Copilot and Gemini CLI
+
+```sh
+copilot plugin install latentsmurf/skilldb-plugins:copilot/skilldb
+gemini extensions install https://github.com/latentsmurf/skilldb-plugins
+```
+
+Review each host's installation prompt and start a new session. Ask: "Use SkillDB to find three skills for reviewing a TypeScript API. Preview the best two and compare their fit with source links."
+
+Copilot CLI 1.0.92 successfully installed the package and enabled its skill in local validation. The test account's organization policy blocked third-party MCP servers, so a complete Copilot discovery conversation is not yet verified. Direct install currently works but warns that future Copilot versions will require a marketplace entry. VS Code supports this portable format; its UI has not been tested here.
+
+Gemini CLI 0.62.0 successfully installed the extension, discovered its skill, and connected to the live catalog server. An authenticated Gemini conversation remains to be tested. Neither result establishes directory approval. The same SkillDB logo is included in `assets/`; display in a host's listing depends on that host's supported metadata.
 
 Each package includes its license. Only reviewed adapter manifests, workflow instructions, documentation, and branding are distributed here. The hosted skill catalog, catalog bodies, private website implementation, account data, and service credentials are not included. The package license does not grant rights to separately hosted catalog content or imply a service subscription. A direct MCP installation supplies transport; it is not a Marketplace listing or approval.
 

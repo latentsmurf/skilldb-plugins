@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "skilldb-catalog": {
+      "type": "streamable-http",
+      "url": "https://skilldb.dev/api/mcp/catalog"
+    }
+  }
+}

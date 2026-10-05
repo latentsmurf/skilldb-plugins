@@ -1,0 +1,11 @@
+{
+  "name": "skilldb",
+  "version": "0.1.0",
+  "description": "Find and compare reusable AI agent skills using public catalog metadata and short previews.",
+  "mcpServers": {
+    "skilldb-catalog": {
+      "httpUrl": "https://skilldb.dev/api/mcp/catalog",
+      "includeTools": ["skilldb_search", "skilldb_get_preview"]
+    }
+  }
+}

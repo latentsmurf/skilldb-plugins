@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "skilldb",
+  "version": "0.1.0",
+  "description": "Find and compare reusable AI agent skills using public catalog metadata and short previews.",
+  "author": {
+    "name": "SkillDB",
+    "email": "dev_chad@skilldb.dev",
+    "url": "https://skilldb.dev"
+  },
+  "homepage": "https://skilldb.dev/mcp",
+  "repository": "https://github.com/latentsmurf/skilldb-plugins",
+  "license": "MIT",
+  "keywords": ["skills", "agents", "catalog", "discovery"]
+}
