@@ -6,5 +6,7 @@
   "homepage": "https://skilldb.dev/mcp",
   "repository": "https://github.com/latentsmurf/skilldb-plugins",
   "license": "MIT",
+  "icon": "./assets/skilldb-logo-512.png",
+  "privacyPolicyUrl": "https://skilldb.dev/privacy",
   "keywords": ["skills", "agents", "catalog", "discovery"]
 }
