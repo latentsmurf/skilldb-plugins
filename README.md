@@ -20,7 +20,7 @@ The service returns public SkillDB links alongside results. A preview is incompl
 
 The Cursor adapter uses portable root `plugin.json`, `mcp.json`, and `skills/find-skills/SKILL.md`. It has no commands, hooks, executables, account credentials, or copied catalog bodies. The logo in `assets/` is the existing SkillDB brand asset for listing preparation.
 
-Actual Cursor installation and host behavior remain unverified. Cursor's publisher terms require any included open-source components to use permissive licenses. These authored package files are distributed under [MIT](LICENSE); publisher review and any platform-specific agreement remain separate. No Cursor publisher terms were accepted by this preparation.
+Actual Cursor installation and host behavior remain unverified. These authored package files are distributed under [MIT](LICENSE). The publisher approved Cursor's terms and submitted the application on October 5, 2026; Cursor confirmed receipt and review is pending. This does not establish Marketplace approval or availability.
 
 ## Repository layout
 
