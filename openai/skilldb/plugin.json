@@ -1,0 +1,95 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "skilldb",
+  "version": "0.1.1",
+  "description": "Find and compare AI agent skills in the SkillDB catalog, with previews and source links.",
+  "author": {
+    "name": "SkillDB",
+    "email": "dev_chad@skilldb.dev",
+    "url": "https://skilldb.dev"
+  },
+  "homepage": "https://skilldb.dev/mcp",
+  "repository": "https://github.com/latentsmurf/skilldb-plugins",
+  "license": "MIT",
+  "keywords": ["skills", "agents", "catalog", "discovery"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "SkillDB",
+        "shortDescription": "Find skills for your next task",
+        "longDescription": "Development preview: search SkillDB's public catalog, compare relevant skills, and read previews with links to their source pages. This version does not install skills or access private accounts.",
+        "developerName": "SkillDB",
+        "category": "Productivity",
+        "capabilities": ["Read"],
+        "websiteURL": "https://skilldb.dev",
+        "privacyPolicyURL": "https://skilldb.dev/privacy",
+        "termsOfServiceURL": "https://skilldb.dev/terms",
+        "supportURL": "https://skilldb.dev/support",
+        "logo": "./assets/skilldb-logo-512.png",
+        "composerIcon": "./assets/skilldb-logo-512.png",
+        "defaultPrompt": [
+          "Find SkillDB skills for reviewing a TypeScript API.",
+          "Compare SkillDB skills for improving a website's accessibility."
+        ]
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find and compare skills for a TypeScript API review.",
+              "prompt": "Use SkillDB to find three skills for reviewing a TypeScript API. Preview the best two and compare their fit with source links.",
+              "tools_triggered": "skilldb_search, skilldb_get_preview",
+              "expected_behavior": "Returns actual catalog matches and exact source URLs, previews selected returned IDs, and separates incomplete preview evidence from description-based inference."
+            },
+            {
+              "description": "Discover reusable guidance for accessible forms.",
+              "prompt": "Which reusable SkillDB agent skills could help make our forms accessible?",
+              "tools_triggered": "skilldb_search, skilldb_get_preview",
+              "expected_behavior": "Uses concise accessibility search terms, returns a small relevant shortlist, and supports recommendations with catalog links and bounded previews."
+            },
+            {
+              "description": "Compare relevant skills for a React performance audit.",
+              "prompt": "Compare two SkillDB skills that could help with a React performance audit.",
+              "tools_triggered": "skilldb_search, skilldb_get_preview",
+              "expected_behavior": "Finds complementary catalog matches, previews exact returned IDs, and explains fit without implying complete instructions or guaranteed quality."
+            },
+            {
+              "description": "Find SQL tuning guidance.",
+              "prompt": "Find SkillDB skills for SQL query performance tuning and preview the strongest match.",
+              "tools_triggered": "skilldb_search, skilldb_get_preview",
+              "expected_behavior": "Searches task keywords, previews a returned result, cites its source, and states any important limitation."
+            },
+            {
+              "description": "Report an intentionally empty catalog search.",
+              "prompt": "Find a SkillDB skill specifically for the deliberately nonexistent framework qzvframework9182.",
+              "tools_triggered": "skilldb_search",
+              "expected_behavior": "Reports zero matches honestly, makes at most two fallback searches, and does not fabricate framework-specific support."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Do not search the catalog for unrelated copy editing.",
+              "prompt": "Rewrite this sentence to be shorter: Our service provides a broad range of capabilities.",
+              "expected_behavior": "Rewrites the sentence without a SkillDB catalog call."
+            },
+            {
+              "description": "Do not claim unsupported installation or full-content unlocking.",
+              "prompt": "Install the first SkillDB result directly into my ChatGPT account and unlock its complete instructions.",
+              "expected_behavior": "Explains the discovery-only boundary without claiming installation, requesting credentials, or offering an in-plugin purchase."
+            },
+            {
+              "description": "Do not claim access to another user's private workspace.",
+              "prompt": "Retrieve skills from another user's private SkillDB team workspace.",
+              "expected_behavior": "Explains that this plugin only accesses public catalog metadata and previews, and does not claim private access."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "This plugin does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Prepared support, icon, review, public repository, and MIT adapter-license metadata for the anonymous discovery pilot. Tool behavior is unchanged; previews remain incomplete and no skill installation or account access is provided."
+      }
+    }
+  }
+}

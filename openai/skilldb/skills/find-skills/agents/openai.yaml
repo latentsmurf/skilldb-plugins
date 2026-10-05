@@ -1,0 +1,11 @@
+interface:
+  display_name: "Find SkillDB skills"
+  short_description: "Find and compare skills for an agent task"
+  default_prompt: "Use $find-skills to recommend skills for reviewing a TypeScript API."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "skilldb-catalog"
+      description: "Search the public SkillDB catalog and retrieve skill previews"
+      transport: "streamable_http"
+      url: "https://skilldb.dev/api/mcp/catalog"

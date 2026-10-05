@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "skilldb-catalog": {
+      "type": "http",
+      "url": "https://skilldb.dev/api/mcp/catalog"
+    }
+  }
+}
