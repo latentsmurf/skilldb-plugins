@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "skilldb-catalog": {
+      "serverUrl": "https://skilldb.dev/api/mcp/catalog"
+    }
+  }
+}

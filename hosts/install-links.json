@@ -1,0 +1,5 @@
+{
+  "kiro": "https://kiro.dev/launch/mcp/add?name=skilldb-catalog&config=%7B%22url%22%3A%22https%3A%2F%2Fskilldb.dev%2Fapi%2Fmcp%2Fcatalog%22%2C%22disabled%22%3Afalse%2C%22autoApprove%22%3A%5B%5D%7D",
+  "lmStudio": "lmstudio://add_mcp?name=skilldb-catalog&config=eyJ1cmwiOiJodHRwczovL3NraWxsZGIuZGV2L2FwaS9tY3AvY2F0YWxvZyJ9",
+  "goose": "goose://extension?url=https%3A%2F%2Fskilldb.dev%2Fapi%2Fmcp%2Fcatalog&type=streamable_http&timeout=30&id=skilldb-catalog&name=SkillDB%20Catalog&description=Find%20and%20compare%20agent%20skills%20using%20public%20metadata%20and%20short%20previews."
+}

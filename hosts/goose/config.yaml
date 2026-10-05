@@ -1,0 +1,7 @@
+extensions:
+  skilldb-catalog:
+    name: SkillDB Catalog
+    type: streamable_http
+    uri: https://skilldb.dev/api/mcp/catalog
+    enabled: true
+    timeout: 30

@@ -1,0 +1,7 @@
+name: SkillDB Catalog
+version: 0.1.0
+schema: v1
+mcpServers:
+  - name: skilldb-catalog
+    type: streamable-http
+    url: https://skilldb.dev/api/mcp/catalog

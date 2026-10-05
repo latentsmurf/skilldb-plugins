@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "skilldb-catalog": {
+      "url": "https://skilldb.dev/api/mcp/catalog",
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
