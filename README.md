@@ -43,6 +43,20 @@ Copilot CLI 1.0.92 successfully installed the package and enabled its skill in l
 
 Gemini CLI 0.62.0 successfully installed the extension, discovered its skill, and connected to the live catalog server. An authenticated Gemini conversation remains to be tested. Neither result establishes directory approval. The same SkillDB logo is included in `assets/`; display in a host's listing depends on that host's supported metadata.
 
+## Install the discovery instructions with the skills CLI
+
+The [skills CLI](https://github.com/vercel-labs/skills) can install just `find-skills` into one agent's current project. For example, for Continue:
+
+```sh
+npx skills add latentsmurf/skilldb-plugins --skill find-skills --agent continue --copy
+```
+
+Run this in the project where you want the skill; choose another supported `--agent` value for your host. The command does not use global installation and does not configure MCP. Before installing, check whether that project already has another skill named `find-skills`; do not overwrite a different skill unintentionally.
+
+For Continue, also save the [catalog configuration](hosts/continue/skilldb-catalog.yaml) as `.continue/mcpServers/skilldb-catalog.yaml` in that project, merging with existing configuration when needed. Other hosts can use the [public host setup instructions](hosts/README.md). Confirm that the host exposes `skilldb_search` and `skilldb_get_preview`, then try the example prompt above. The endpoint needs no SkillDB account or key. Without that connection, the installed skill can explain setup and link to the catalog, but cannot supply live tool results.
+
+The CLI normally reports installation telemetry to [skills.sh](https://skills.sh/docs/cli); its documented opt-out is `DISABLE_TELEMETRY=1`. Installation and indexing do not establish a host conversation test or a directory endorsement. Existing [host validation](hosts/HOST-VALIDATION.md) distinguishes the checks actually performed.
+
 Each package includes its license. Only reviewed adapter manifests, workflow instructions, documentation, and branding are distributed here. The hosted skill catalog, catalog bodies, private website implementation, account data, and service credentials are not included. The package license does not grant rights to separately hosted catalog content or imply a service subscription. A direct MCP installation supplies transport; it is not a Marketplace listing or approval.
 
 [SkillDB catalog](https://skilldb.dev/skills) · [Privacy](https://skilldb.dev/privacy) · [Terms](https://skilldb.dev/terms) · [Support](mailto:dev_chad@skilldb.dev)
