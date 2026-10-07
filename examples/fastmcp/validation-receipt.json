@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-07T21:16:49.565086+00:00",
+  "fastmcp_version": "4.0.11",
+  "endpoint": "https://skilldb.dev/api/mcp/catalog",
+  "protocol": "2025-06-18",
+  "tools": [
+    "skilldb_get_preview",
+    "skilldb_search"
+  ],
+  "query": "react accessibility",
+  "total_matches": 1,
+  "candidates": [
+    {
+      "id": "testing-services-skills/testing-library.md",
+      "title": "Testing Library",
+      "source": "https://skilldb.dev/skills/testing-services-skills/testing-library",
+      "access": "preview",
+      "preview_characters": 203
+    }
+  ],
+  "empty_result_check": "passed",
+  "scope": "Deterministic live client calls; no model conversation, installation, or full-content retrieval."
+}

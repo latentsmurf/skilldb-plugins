@@ -29,6 +29,16 @@ Actual Cursor installation and host behavior remain unverified. These authored p
 - `openai/skilldb/`: portable OpenAI package with its own manifest and versioned metadata.
 - `copilot/skilldb/`: Agent Plugins 1.0 package for GitHub Copilot and VS Code.
 - Root `gemini-extension.json`: Gemini CLI adapter using the shared discovery skill and branding.
+- `examples/fastmcp/`: runnable Python discovery client with live validation evidence.
+- `examples/flowise/`: MCP component example for existing installations of the archived Flowise project.
+
+## Examples for agent builders
+
+The [FastMCP example](examples/fastmcp/README.md) creates a shortlist of skill candidates with exact IDs, incomplete-preview labels and source links for operator review. It was tested with FastMCP 4.0.11 against the live anonymous catalog, including empty results. It complements a local skills library without downloading or installing candidate skills.
+
+The [Flowise example](examples/flowise/README.md) documents Custom MCP configuration and validates the unchanged Flowise MCP toolkit. Flowise is archived; this example is for existing installations. Its full application UI and model conversation remain untested.
+
+Both examples use deterministic live tool calls without a model or SkillDB account. These checks establish client/component compatibility, not independent adoption, host endorsement or a model evaluation. Example scripts are run explicitly by the reader; plugin installation does not execute them.
 
 ## Copilot and Gemini CLI
 
@@ -57,6 +67,6 @@ For Continue, also save the [catalog configuration](hosts/continue/skilldb-catal
 
 The CLI normally reports installation telemetry to [skills.sh](https://skills.sh/docs/cli); its documented opt-out is `DISABLE_TELEMETRY=1`. Installation and indexing do not establish a host conversation test or a directory endorsement. Existing [host validation](hosts/HOST-VALIDATION.md) distinguishes the checks actually performed.
 
-Each package includes its license. Only reviewed adapter manifests, workflow instructions, documentation, and branding are distributed here. The hosted skill catalog, catalog bodies, private website implementation, account data, and service credentials are not included. The package license does not grant rights to separately hosted catalog content or imply a service subscription. A direct MCP installation supplies transport; it is not a Marketplace listing or approval.
+Each package includes its license. Only reviewed adapter manifests, workflow instructions, authored example code, sanitized test receipts, documentation, and branding are distributed here. The hosted skill catalog, catalog bodies, private website implementation, account data, and service credentials are not included. The package license does not grant rights to separately hosted catalog content or imply a service subscription. A direct MCP installation supplies transport; it is not a Marketplace listing or approval.
 
 [SkillDB catalog](https://skilldb.dev/skills) · [Privacy](https://skilldb.dev/privacy) · [Terms](https://skilldb.dev/terms) · [Support](mailto:dev_chad@skilldb.dev)

@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-07T21:15:56.570Z",
+  "status": "passed",
+  "scope": "deterministic-flowise-mcp-toolkit-component-integration",
+  "node": "v24.13.1",
+  "package": "flowise-components@3.1.4",
+  "endpoint": "https://skilldb.dev/api/mcp/catalog",
+  "credentialsUsed": false,
+  "modelUsed": false,
+  "flowiseServerOrUiUsed": false,
+  "tools": [
+    "skilldb_get_preview",
+    "skilldb_search"
+  ],
+  "search": {
+    "query": "react accessibility",
+    "returned": 1,
+    "total": 1
+  },
+  "preview": {
+    "id": "testing-services-skills/testing-library.md",
+    "access": "preview",
+    "excerptCharacters": 203,
+    "url": "https://skilldb.dev/skills/testing-services-skills/testing-library"
+  },
+  "emptySearch": {
+    "returned": 0,
+    "total": 0,
+    "hasMore": false
+  },
+  "upstreamFileSha256": {
+    "dist/nodes/tools/MCP/core.js": "b976824e21d83268f7f89a951a809ae7a083dacfdc1ef8aba9a11a730bc577c5",
+    "dist/src/httpSecurity.js": "e09d16a61941343e3615b4ee7ffd84209be7374f54841db3180a9aa839820a63"
+  }
+}
