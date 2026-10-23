@@ -1,0 +1,64 @@
+{
+  "checked_at_utc": "2026-10-23T08:08:22.391Z",
+  "node": "v24.13.1",
+  "versions": {
+    "@mastra/core": "1.79.0",
+    "@mastra/mcp": "2.5.0",
+    "zod": "4.6.7"
+  },
+  "overrides": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "@modelcontextprotocol/core": "2.3.1",
+    "@modelcontextprotocol/server": "2.3.1"
+  },
+  "endpoint": "https://skilldb.dev/api/mcp/catalog",
+  "tools": [
+    "catalog_skilldb_get_preview",
+    "catalog_skilldb_search"
+  ],
+  "scope": "Live native Mastra workflow and MCP calls; scripted source selection, no LLM or human review.",
+  "primary": {
+    "initial_status": "suspended",
+    "final_status": "success",
+    "total_matches": 1,
+    "candidates": [
+      {
+        "id": "testing-services-skills/testing-library.md",
+        "title": "Testing Library",
+        "source_url": "https://skilldb.dev/skills/testing-services-skills/testing-library",
+        "access": "preview",
+        "preview_characters": 203
+      }
+    ],
+    "tool_call_sequence": [
+      "catalog_skilldb_search",
+      "catalog_skilldb_get_preview"
+    ],
+    "calls_during_resume": 0,
+    "handoff": {
+      "query": "react accessibility",
+      "outcome": "selected_for_source_review",
+      "references": [
+        {
+          "id": "testing-services-skills/testing-library.md",
+          "title": "Testing Library",
+          "source_url": "https://skilldb.dev/skills/testing-services-skills/testing-library",
+          "access": "preview",
+          "preview_characters": 203
+        }
+      ],
+      "next_step": "Review complete source, license and permissions separately before loading any skill."
+    }
+  },
+  "empty_control": {
+    "result": {
+      "query": "zzskilldb-mastra-no-match-20261023",
+      "outcome": "no_matches",
+      "references": [],
+      "next_step": "Review complete source, license and permissions separately before loading any skill."
+    },
+    "tool_call_sequence": [
+      "catalog_skilldb_search"
+    ]
+  }
+}

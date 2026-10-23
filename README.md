@@ -31,6 +31,8 @@ Actual Cursor installation and host behavior remain unverified. These authored p
 - Root `gemini-extension.json`: Gemini CLI adapter using the shared discovery skill and branding.
 - `examples/fastmcp/`: runnable Python discovery client with live validation evidence.
 - `examples/flowise/`: MCP component example for existing installations of the archived Flowise project.
+- `examples/pydantic-ai/`: scripted agent with a local review capability and live MCP discovery.
+- `examples/mastra/`: TypeScript workflow with live MCP discovery and a source-selection pause.
 
 ## Examples for agent builders
 
@@ -38,7 +40,11 @@ The [FastMCP example](examples/fastmcp/README.md) creates a shortlist of skill c
 
 The [Flowise example](examples/flowise/README.md) documents Custom MCP configuration and validates the unchanged Flowise MCP toolkit. Flowise is archived; this example is for existing installations. Its full application UI and model conversation remain untested.
 
-Both examples use deterministic live tool calls without a model or SkillDB account. These checks establish client/component compatibility, not independent adoption, host endorsement or a model evaluation. Example scripts are run explicitly by the reader; plugin installation does not execute them.
+The [Pydantic AI example](examples/pydantic-ai/README.md) loads an authored review procedure, then uses native MCP tools to return a source-review queue. Its scripted FunctionModel requires no provider credentials.
+
+The [Mastra example](examples/mastra/README.md) searches and previews up to three candidates, suspends for an operator to select sources, and resumes with a source-review handoff. It includes an interactive CLI, 15 passing offline tests and a live validation receipt. No model or SkillDB account is required.
+
+These checks establish deterministic framework integration, not independent adoption, host endorsement or model quality. Example scripts are run explicitly by the reader; plugin installation does not execute them.
 
 ## Copilot and Gemini CLI
 
